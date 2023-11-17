@@ -12,6 +12,7 @@ I decided to start with this question because the origional dataframe consists o
 <br>
 <br>
 When I downloaded the original dataset, there was initially 1534 outage recorded with 13 features. I have created the table of 14 features with description below. 
+
 | Feature | Description |
 | -------------------- | ----------- |
 | Year | Year of insident |
@@ -49,10 +50,15 @@ After looking at the relationship between these columns, I looked into the "NERC
 Lastly, I looked at every column in the dataframe to check that the type of each column is appropriate. 
 <br>
 Here is the fist few row of the cleaned Dataframe
+<br>
 
-```py
-print(outage.head().to_markdown(index=False))
-```
+|   YEAR |   MONTH | U.S._STATE   | NERC.REGION   | CLIMATE.REGION     | CLIMATE.CATEGORY   | CAUSE.CATEGORY     | CAUSE.CATEGORY.DETAIL   |   HURRICANE.NAMES |   OUTAGE.DURATION(hr) |   CUSTOMERS.AFFECTED | OUTAGE.START        | OUTAGE.RESTORATION   |
+|-------:|--------:|:-------------|:--------------|:-------------------|:-------------------|:-------------------|:------------------------|------------------:|----------------------:|---------------------:|:--------------------|:---------------------|
+|   2011 |       7 | Minnesota    | MRO           | East North Central | normal             | severe weather     | nan                     |               nan |            51         |                70000 | 2011-07-01 17:00:00 | 2011-07-03 20:00:00  |
+|   2014 |       5 | Minnesota    | MRO           | East North Central | normal             | intentional attack | vandalism               |               nan |             0.0166667 |                  nan | 2014-05-11 18:38:00 | 2014-05-11 18:39:00  |
+|   2010 |      10 | Minnesota    | MRO           | East North Central | cold               | severe weather     | heavy wind              |               nan |            50         |                70000 | 2010-10-26 20:00:00 | 2010-10-28 22:00:00  |
+|   2012 |       6 | Minnesota    | MRO           | East North Central | normal             | severe weather     | thunderstorm            |               nan |            42.5       |                68200 | 2012-06-19 04:30:00 | 2012-06-20 23:00:00  |
+|   2015 |       7 | Minnesota    | MRO           | East North Central | warm               | severe weather     | nan                     |               nan |            29         |               250000 | 2015-07-18 02:00:00 | 2015-07-19 07:00:00  |
 
 <br>
 
