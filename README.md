@@ -11,24 +11,46 @@ To make an inference about potential outage in the future, we must first analyze
 I decided to start with this question because the origional dataframe consists of information all over the US and I want to determine if we should treat these information as one, or separate these data into various regions to investigate further. If the cause of the outage comes from area of power supplied by WECC and area that is not supplied from WECC to illustrate the same population, this can be a great measure for us to invesitgate this data set as a whole, but if they don't represent a same population, it creates a strong argument to query these dataframe by NERC region to investigate more on specific are of US rather than as a whole. 
 <br>
 <br>
-When I downloaded the original dataset, there was initially 1534 outage recorded with 14 features. I have created the table of 14 features with description below. 
-| Feature              | Description |
+When I downloaded the original dataset, there was initially 1534 outage recorded with 13 features. I have created the table of 14 features with description below. 
+| Feature | Description |
 | -------------------- | ----------- |
-| Year | Year of insident       |
-| Month  | Month of insident        |
-| U.S._STATE  | US STATE       |
+| Year | Year of insident |
+| Month  | Month of insident |
+| U.S._STATE | US STATE|
 | NERC.REGION  | The North American Electric Reliability Corporation Region involved |
-| CLIMATE.REGION       | US Climate regions specified by National Centers for Environmental Information       |
+| CLIMATE.REGION | US Climate regions specified by National Centers for Environmental Information |
 | CLIMATE.CATEGORY     | Climate of that year       |
 | CAUSE.CATEGORY	   | Cause of outage        |
 | CAUSE.CATEGORY.DETAIL| Cause of outage in detail      |
-| HURRICANE.NAMES      | Name of the hurricane if the outage is caused by hurricane        |
-| OUTAGE.DURATION(hr)  | How long the outage last in hour       |
-| CUSTOMERS.AFFECTED   | Number of customers affected by the outage        |
+| HURRICANE.NAMES      | Name of the hurricane if the outage is caused by hurricane|
+| OUTAGE.DURATION(hr)  | How long the outage last in hour |
+| CUSTOMERS.AFFECTED   | Number of customers affected by the outage|
 | OUTAGE.START         | Date of outage start       |
 | OUTAGE.RESTORATION   | Date of when outage ended        |
 
+
 ## Cleaning and EDA
+
+### Date Cleaning
+
+We first downloaded the dataframe through exel as a csv file. 
+<br>
+The first cleaning I did was dealing with the outage time columns. We had four columns of strings which is outage start date and time, outage end date and time.
+I have craeted a function convert_timestamp that takes in dataframe of these two columns and return a series where we combie these two column and converting the type from object to datetime. I assigned this series to a new column name OUTAGE.START and OUTAGE RESTORATION. 
+<br>
+The next cleaning I did was looking at OURAGE.DURATION column. This column was initally saved as in minutes, but it came to my attention that there are few outage that lasts over a day, so I divided this column by 60 to create a new column our outage duration in hours. 
+<br>
+Additionally, I checked if the relationship between OUTAGE.DURATION(hr) column and OUTAGE.START - OUTAGE.RESTORATION column are consistent. Conceptually, the hours between OUTAGE.START to OUTAGE.RESTORATION column must be consistent with OUTAGE.DURATION(hr) column. 
+I first saw that the number of null on these columns are consistent with each other, which signifies that if duration of outage is unknown, the start and endtime of the outage is also unknown. 
+Next I realized that there were 31 rows where the OUTAGE.DURATION and OUTAGE.RESTORATION - OUTAGE.START column differed in exactly one hour, but I disregarded this difference since one hour does not have a major impact in these column relationships. 
+<br>
+After looking at the relationship between these columns, I looked into the "NERC.REGION" column. Looking at the unique values in NERC.REGION, there were 14 unique values when **[US energy atlas](https://atlas.eia.gov/datasets/eia::nerc-regions/explore?location=34.013788%2C-95.962606%2C4.59)** stated that there are 7 official NERC REGION and other region as indeterminate. I have created a new function change_indeterminate which replace value of every reagion that is not listed as "INDETERMINATE" and reassigned this series to the dataframe.
+<br>
+Lastly, I looked at every column in the dataframe to check that the type of each column is appropriate. 
+<br>
+<br>
+
+### EDA
 
 ## Assessment of Missingness
 
