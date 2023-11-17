@@ -76,16 +76,16 @@ This scatter plot represent the relationship between the duration of the outage 
 <br>
 <br>
 
-|   equipment failure |   fuel supply emergency |   intentional attack |   islanding |   public appeal |   severe weather |   system operability disruption |
-|--------------------:|------------------------:|---------------------:|------------:|----------------:|-----------------:|--------------------------------:|
-|                   6 |                       0 |                    3 |           0 |               3 |               58 |                              12 |
-|                   0 |                       4 |                   16 |           2 |               2 |               21 |                               0 |
-|                   2 |                      13 |                   57 |           1 |               4 |               64 |                               9 |
-|                   8 |                       5 |                  106 |           5 |               3 |              279 |                              12 |
-|                   7 |                       2 |                   30 |           1 |              13 |              130 |                              18 |
-|                   1 |                       1 |                    8 |           2 |              16 |               36 |                               2 |
-|                   2 |                       5 |                    9 |           0 |              16 |               62 |                              17 |
-|                  31 |                      20 |                  189 |          35 |              12 |              109 |                              55 |
+| NERC.REGION   |   equipment failure |   fuel supply emergency |   intentional attack |   islanding |   public appeal |   severe weather |   system operability disruption |
+|:--------------|--------------------:|------------------------:|---------------------:|------------:|----------------:|-----------------:|--------------------------------:|
+| INDETERMINATE |                   6 |                       0 |                    3 |           0 |               3 |               58 |                              12 |
+| MRO           |                   0 |                       4 |                   16 |           2 |               2 |               21 |                               0 |
+| NPCC          |                   2 |                      13 |                   57 |           1 |               4 |               64 |                               9 |
+| RFC           |                   8 |                       5 |                  106 |           5 |               3 |              279 |                              12 |
+| SERC          |                   7 |                       2 |                   30 |           1 |              13 |              130 |                              18 |
+| SPP           |                   1 |                       1 |                    8 |           2 |              16 |               36 |                               2 |
+| TRE           |                   2 |                       5 |                    9 |           0 |              16 |               62 |                              17 |
+| WECC          |                  31 |                      20 |                  189 |          35 |              12 |              109 |                              55 |
 
 This is a pivot table that looks at the relationship between NERC REGION and the Cause of the outage. You can see that the main reason of the outage depends on the region you reside in. 
 
