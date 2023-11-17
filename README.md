@@ -96,6 +96,7 @@ This scatter plot represent the relationship between the duration of the outage 
 
 This is a pivot table that looks at the relationship between NERC REGION and the Cause of the outage. You can see that the most prominant reason of the outage depends on the region you reside in. 
 <br>
+<br>
 
 ## Assessment of Missingness
 
@@ -123,7 +124,8 @@ The alternative hypothesis is **the sampe of NERC REGION of WECC illustrates a d
 <iframe src="assets/Permutation_distribution.html" width=800 height=600 frameBorder=0></iframe>
 This is the different distribution of causes depending on wheather the outage resulted from WECC region or not.
 <br>
+<br>
 Because we are comparing if two sample came from the same population, we will perform a permutation test with 5% significance. 
-The resulting p value was 0.0 which concludes that we will reject the null that the different distribution of causes illustrated by WECC region and others are unlikely due to chances alone. 
+The resulting p value was 0.0 which concludes that we will reject the null and conclude that the different distribution of causes illustrated by WECC region and others are unlikely due to chances alone. 
 <br>
 By interpretating this result, I will most likely look over this dataframe and focus on different NERC region to make a inference about the future outage rather than looking at every outage in the region. 
