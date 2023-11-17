@@ -15,21 +15,22 @@ I decided to start with this question because the origional dataframe consists o
 <br>
 When I downloaded the original dataset, there was initially 1534 outage recorded with 56 features. We chose 13 features to investigate futher and the description are below. 
 
-| Feature | Description |
-| -------------------- | ----------- |
-| Year | Year of insident |
-| Month  | Month of insident |
-| U.S._STATE | US STATE|
-| NERC.REGION  | The North American Electric Reliability Corporation Region involved |
-| CLIMATE.REGION | US Climate regions specified by National Centers for Environmental Information |
-| CLIMATE.CATEGORY     | Climate of that year       |
-| CAUSE.CATEGORY	   | Cause of outage        |
-| CAUSE.CATEGORY.DETAIL| Cause of outage in detail      |
-| HURRICANE.NAMES      | Name of the hurricane if the outage is caused by hurricane|
-| OUTAGE.DURATION(hr)  | How long the outage last in hour |
-| CUSTOMERS.AFFECTED   | Number of customers affected by the outage|
-| OUTAGE.START         | Date of outage start       |
-| OUTAGE.RESTORATION   | Date of when outage ended        |
+| Feature               | Description                                                                       |
+|:----------------------|:----------------------------------------------------------------------------------|
+| YEAR                  | Year of insident                                                                  |
+| MONTH                 | Month of insident                                                                 |
+| U.S._STATE            | US STATE                                                                          |
+| NERC.REGION           | The North American Electric Reliability Corporation Region involved in the outage |
+| CLIMATE.REGION        | US Climate regions specified by National Centers for Environmental Information    |
+| CLIMATE.CATEGORY      | Climate of that year                                                              |
+| CAUSE.CATEGORY        | Cause of outage                                                                   |
+| CAUSE.CATEGORY.DETAIL | Cause of outage in detail                                                         |
+| HURRICANE.NAMES       | Name of the hurricane if the outage is caused by hurricane                        |
+| OUTAGE.DURATION(hr)   | How long the outage last in hour                                                  |
+| CUSTOMERS.AFFECTED    | Number of customers affected by the outage                                        |
+| OUTAGE.START          | When the outage start                                                             |
+| OUTAGE.RESTORATION    | When outage ended                                                                 |
+
 <br>
 
 ## Cleaning and EDA
