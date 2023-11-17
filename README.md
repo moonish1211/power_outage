@@ -54,10 +54,13 @@ Here is the fist few row of the cleaned Dataframe
 print(outage.head().to_markdown(index=False))
 ```
 
-`code`print(outage.head().to_markdown(index=False))
 <br>
 
 ### EDA
+
+<iframe src="assets/cause_histogram.html" width=800 height=600 frameBorder=0></iframe>
+
+
 
 ## Assessment of Missingness
 
