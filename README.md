@@ -112,18 +112,15 @@ As you can see, the observed TVD recorded is very unlikely due to chances alone,
 
 ## Hypothesis Testing
 
-1) How to get website URL
-2) How to open the website to make sure it works
-3) How to add dataframe to the website
-
-The null hypothesis for this analysis is ** The sample of NERC REGION of WECC do come from the same population in terms of causes of outage of other NERC REGION **
+The null hypothesis for this analysis is **The sample of NERC REGION of WECC do come from the same population in terms of causes of outage of other NERC REGION**
 <br>
-The alternative hypothesis is ** The sampe of NERC REGION of WECC illustrates a different cause of outage compared to other NERC REGION.**
-<br>
-Because we are comparing if two sample came from the same population, we will perform a permutation test with 5% significance. 
-
+The alternative hypothesis is **The sampe of NERC REGION of WECC illustrates a different cause of outage compared to other NERC REGION**
 <br>
 <iframe src="assets/Permutation_distribution.html" width=800 height=600 frameBorder=0></iframe>
 <br>
+This is the different distribution of causes depending on weather the outage resulted from WECC region or not.
 
-The resulting p value was 0.0 which signifies that we will reject the null that the different distribution of causes illustrated by WECC region and others are unlikely due to chances alone.  
+<br>
+Because we are comparing if two sample came from the same population, we will perform a permutation test with 5% significance. 
+<br>
+The resulting p value was 0.0 which concludes that we will reject the null that the different distribution of causes illustrated by WECC region and others are unlikely due to chances alone.  
