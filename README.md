@@ -59,13 +59,19 @@ print(outage.head().to_markdown(index=False))
 ### EDA
 
 <iframe src="assets/cause_histogram.html" width=800 height=600 frameBorder=0></iframe>
+<br>
 This is a histogram that represent the distribution of the causes of the outage. There are 7 causes in these outage and we can observe that outage from severe weather is the most common. 
 
 <br>
 <iframe src="assets/duration_effected_customer.html" width=800 height=600 frameBorder=0></iframe>
+<br>
 This scatter plot represent the relationship between the duration of the outage and total number of customers effected during these outage. The interesting thing to note is that although most dots are scattered in one area, we can see that the more customer effected, the shorter the duration of outage and vice versa. 
 
+<br>
 
+```py
+print(counts[['Quarter', 'Count']].head().to_markdown(index=False))
+```
 
 ## Assessment of Missingness
 
