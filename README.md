@@ -114,4 +114,8 @@ The alternative hypothesis is ** The sampe of NERC REGION of WECC illustrates a 
 <br>
 Because we are comparing if two sample came from the same population, we will perform a permutation test with 5% significance. 
 
+<br>
+<iframe src="assets/Permutation_distribution.html" width=800 height=600 frameBorder=0></iframe>
+<br>
+
 The resulting p value was 0.0 which signifies that we will reject the null that the different distribution of causes illustrated by WECC region and others are unlikely due to chances alone.  
