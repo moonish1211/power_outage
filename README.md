@@ -50,6 +50,10 @@ Lastly, I looked at every column in the dataframe to check that the type of each
 <br>
 Here is the fist few row of the cleaned Dataframe
 
+```py
+print(outage.head().to_markdown(index=False))
+```
+
 `code`print(outage.head().to_markdown(index=False))
 <br>
 
