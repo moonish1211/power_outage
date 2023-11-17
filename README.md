@@ -34,6 +34,7 @@ When I downloaded the original dataset, there was initially 1534 outage recorded
 
 ## Cleaning and EDA
 <br>
+
 ### Date Cleaning
 
 We first downloaded the dataframe through exel as a csv file. 
