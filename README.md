@@ -1,4 +1,11 @@
-# power_outage
-This is a project for course DSC80 at UCSD
+# Power outage Data
 
-Read me read me!!!
+## Introduction
+
+## Cleaning and EDA
+
+## Assessment of Missingness
+
+## Hypothesis Testing
+
+
