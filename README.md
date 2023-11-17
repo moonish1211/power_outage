@@ -112,9 +112,9 @@ As you can see, the observed TVD recorded is very unlikely due to chances alone,
 
 ## Hypothesis Testing
 
-The null hypothesis for this analysis is **The sample of NERC REGION of WECC do come from the same population in terms of causes of outage of other NERC REGION**
+The null hypothesis for this analysis is **the sample of NERC REGION of WECC do come from the same population in terms of causes of outage of other NERC REGION**
 <br>
-The alternative hypothesis is **The sampe of NERC REGION of WECC illustrates a different cause of outage compared to other NERC REGION**
+The alternative hypothesis is **the sampe of NERC REGION of WECC illustrates a different cause of outage compared to other NERC REGION**
 <br>
 <iframe src="assets/Permutation_distribution.html" width=800 height=600 frameBorder=0></iframe>
 <br>
