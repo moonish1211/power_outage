@@ -77,6 +77,28 @@ This is a pivot table that looks at the relationship between NERC REGION and the
 
 ## Assessment of Missingness
 
+Looking at NMAR
+<br>
+I argue that the possible NMAR in this dataset is in the COUTAGE.RESTORATION column. The main reason why I argue this is because there are 1442 non null value in OUTAGE.START column but there are 1395 non null value in the OUTAGE.RESTORATION column. This means that date of when outage started is recorded when the date the outage ended is not recorded. The possible consideration for this case is if the duration of the outage are significantly small, then people may forget to record the date that the outage were restored. Since the data of duration of the outage are related with the OUTAGE.RESTORATION column, I think the additional data that can help you explain the missingness is getting the duration of these outage from different confidnetial source and merge these two together.  
+
+<br>
+<br>
+Looking at MAR
+<br>
+Since both the NERC.REGION column and CAUSE.CATEGORY column don't have null in every data, there isn't a particular need to interpret result of the missingness with respect of the question I am trying to analyze. 
+Although I will not using this column in my hypothesis testing, there is a column call CAUSE.CATEGORY.DETAIL and HURRICANE.NAMES that do have null value and are related to CAUSE.CATEGORY column, so I decided to analyze HURRICANE.NAMES missingness with relation to CAUSE.CATEGORY.DETAIL column. 
+Since the CAUSE.CATEGORY.DETAIL column is categorical, I performd a TVD as a test statistic to make this analysis. 
+The empirical distribution of TVD and the observed statistics are shown below. 
+<br>
+<iframe src="assets/MAR_hurricane.html" width=800 height=600 frameBorder=0></iframe>
+<br>
+
+As you can see, the observed TVD recorded is very unlikely due to chances alone, therefore we will reject the null that missingness of hurricane column are likely to be effected by the detailed cause column.  
+
 ## Hypothesis Testing
+
+1) How to get website URL
+2) How to open the website to make sure it works
+3) How to add dataframe to the website
 
 
