@@ -68,10 +68,12 @@ This is a histogram that represent the distribution of the causes of the outage.
 This scatter plot represent the relationship between the duration of the outage and total number of customers effected during these outage. The interesting thing to note is that although most dots are scattered in one area, we can see that the more customer effected, the shorter the duration of outage and vice versa. 
 
 <br>
+<br>
 
 ```py
-print(counts[['Quarter', 'Count']].head().to_markdown(index=False))
+print(counts.head().to_markdown(index=False))
 ```
+This is a pivot table that looks at the relationship between NERC REGION and the Cause of the outage. You can see that the main reason of the outage depends on the region you reside in. 
 
 ## Assessment of Missingness
 
