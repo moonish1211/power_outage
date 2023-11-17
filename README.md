@@ -48,6 +48,8 @@ After looking at the relationship between these columns, I looked into the "NERC
 <br>
 Lastly, I looked at every column in the dataframe to check that the type of each column is appropriate. 
 <br>
+Here is the fist few row of the cleaned Dataframe
+print(outage.head().to_markdown(index=False))
 <br>
 
 ### EDA
